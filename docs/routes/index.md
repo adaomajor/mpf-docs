@@ -105,7 +105,7 @@ Router::fallback("404"); // pass down the view name
 
 ## Static Files
 Setting the static folder where your static files will be served from
-#### js | css | jpeg | jpg | png |ico | ...
+#### js | css | jpeg | jpg | png | ico | ...
 The static path for your static files must be outside the /App/ directory 
 - [static folder](#router)
 

@@ -14,7 +14,7 @@ export default {
               { text: 'youtube', link: 'https://www.youtube.com/@adaomajor' },
               { text: 'linkedin', link: 'https://www.linkedin.com/in/adaomajor' },
               { text: 'facebook', link: 'https://facebook.com/adao.major.0' },
-              { text: 'X - Twitter', link: 'https://x.com/gh0xt_am' },
+              { text: 'X - Twitter', link: 'https://x.com/gh0x7_' },
               { text: 'buy me a coffee', link: 'https://buymeacoffee.com/adaomajor'}
         ]
       }
