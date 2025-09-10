@@ -3,15 +3,15 @@ MPF is made upon the MVC pattern, so here you see how to work with the Models
 
 ## Creating Model
 ```sh
-mpf@dev:$ php mpf create model User
-[*] creating model: User
+mpf@dev:$ php mpf create model Users
+[*] creating model: Users
 [*] model: User created!
 ```
 ## Model
 Your views are inside the path /App/Model
 
 ```sh
-mpf@dev:$ cat /App/Model/User.php
+mpf@dev:$ cat /App/Model/Users.php
 ```
 ```php
 namespace MPF\Model;
@@ -23,7 +23,7 @@ Class Users extends Model{
             
     public function __construct(){
         $this->fields = [
-            "id" => Model::int($pk = true),
+            "id" => Model::PK(),
             "name" => Model::char(30, $nullable = null),
             "email" => Model::char(70, $nullable = null),
             "password" => Model::char(255, $nullable = null),
@@ -32,6 +32,26 @@ Class Users extends Model{
 }
 ?>
 ```
+You can use eather Model shortcut M or self instead of Model::*
+```php
+namespace MPF\Model;
+use MPF\Core\DB\Model;
+
+Class Users extends Model{
+    protected $table = "Users";
+    protected $fields = [];
+            
+    public function __construct(){
+        $this->fields = [
+            "id" => self::PK(),
+            "name" => self::char(30, $nullable = null),
+            "email" => self::char(70, $nullable = null),
+            "password" => self::char(255, $nullable = null),
+        ];
+    }
+}
+?>
+
 ## Migrate
 You can migrate all the models with the following command
 ```sh
@@ -54,7 +74,7 @@ mpf@dev:$ php mpf migrate Users
 
 ## Model Fields Type
 ```php
- if $pk -> INT PRIMARY KEY NOT NULL AUTO_INCREMTENT
+ if ::PK() -> INT PRIMARY KEY NOT NULL AUTO_INCREMTENT
  if $nullable -> INT | else -> INT NOT NULL
  if $default -> TYPE | TYPE NOT NULL DEFAULT $default
  if $int(10) -> DECIMAL(10 | int, 2 | decimal)
@@ -63,9 +83,14 @@ mpf@dev:$ php mpf migrate Users
  $choices -> ['Angola', 'USA' , 'Portugal', 'Brazil']
  
 ```
+## PRIMARY KEY
+```php
+Model::PK();
+```
+---
 ## INTEGER
 ```php
-Model::int($primary_key = true | false, $nullable = true | null, $default = int | null );
+Model::int($nullable = true | null, $default = int | null );
 // INT
 ```
 ## DECIMAL
@@ -89,7 +114,7 @@ Model::bool($nullable = true | null, $default = true | false );
 ```
 ## ENUMARATIONS
 ```php
-Model::enum($choices = [], $nullable = true | null, $default = 'Angola' );
+Model::enum($choices = ['M', 'F'], $nullable = true | null, $default = 'F' );
 // ENUM('M','F')
 ```
 ## DATE

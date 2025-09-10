@@ -2,10 +2,10 @@ export default {
   // site-level options
   lang: 'en-US',
   title: 'MPF documentation',
-  description: 'A lightweight and powerful PHP framework | Adão Major',
+  description: 'MPF - Minimalist PHP Framework. A lightweight, flexible, open-source PHP framework for modern web apps. Built by Adão Major.',
   
   themeConfig: {
-    logo: '/logo.ico',
+    logo: './logo.ico',
     nav: [
       { text: 'MPF - github', link: 'https://github.com/adaomajor/mpf' },
       { text: 'Adão Major',
@@ -13,9 +13,10 @@ export default {
               { text: 'github', link: 'https://github.com/adaomajor' },
               { text: 'youtube', link: 'https://www.youtube.com/@adaomajor' },
               { text: 'linkedin', link: 'https://www.linkedin.com/in/adaomajor' },
-              { text: 'facebook', link: 'https://facebook.com/adao.major.0' },
               { text: 'X - Twitter', link: 'https://x.com/gh0x7_' },
-              { text: 'buy me a coffee', link: 'https://buymeacoffee.com/adaomajor'}
+              { text: 'buy me a coffee', link: 'https://buymeacoffee.com/adaomajor'},
+              { text: 'facebook', link: 'https://facebook.com/adao.major.0' },
+              { text: 'instagram' , link: 'https://www.instagram.com/adao_major'},
         ]
       }
     ],
@@ -26,6 +27,7 @@ export default {
           { text: 'Introduction', link: '/' },
           { text: 'Instalation', link: '/intro/instalation' },
           { text: 'CLI', link: '/intro/cli' },
+          { text: 'What\'s in MPF 1.0.2', link: '/whatsnew' },
         ]
       },
       {
@@ -71,9 +73,12 @@ export default {
           { text: 'Model Fields Type', link: '/model/#model-fields-type' },
           { text: 'Saving Data', link: '/model/saving' },
           { text: 'Finding Data', link: '/model/finding' },
+          { text: 'Relational Operators', link: '/model/relationalop' },
+          { text: 'Updating Data', link: '/model/updating' },
           { text: 'Deleting Data', link: '/model/deleting' },
           { text: 'Foreign Key', link: '/model/fk' },
-          { text: 'Join', link: '/model/join' }
+          { text: 'Join', link: '/model/join' },
+          { text: 'Raw Queries', link: '/model/rawqueries' }
         ]
       }
     ]

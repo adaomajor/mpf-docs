@@ -6,11 +6,18 @@ use MPF\Controller\User; //import your custon controller
 Router::post('/user/[id]/delete', ['User', 'delete']);
 ```
 
+Now there is no need to instantiate the class before delete
+
+Just go Strait
+
+*Model::delete([ *Your conditions* ])*
+
+
+
 ```php
     public function delete($id){
         // AUTH
-        $userModel = new Users();
-        $user = $userModel->delete(['id' => $id]); // delete from users where id = 1; and then return
+        $user = Users::delete(['id' => $id]); // delete from users where id = 1; and then return
         Res::json($users); //send deleted data as a json
     }
 ```
@@ -21,8 +28,7 @@ Router::post('/user/[id]/delete', ['User', 'delete']);
     // WHERE id=1 AND name='adaomajor'
     public function delete($id){
         // AUTH
-        $userModel = new Users();
-        $user = $userModel->delete(['id' => $id, 'name' => 'Adão Major'])
+        $user = Users::delete(['id' => $id, 'name' => 'Adão Major'])
         Res::json($user);
     }
 ```

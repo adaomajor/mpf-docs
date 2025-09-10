@@ -4,7 +4,7 @@
 ```sh
 mpf@app:$ php mpf help
         ╔══════════════════════════════════════════════════════╗
-        ║                MPF Framework CLI v 1.0.0             ║
+        ║                MPF Framework CLI v 1.0.2             ║
         ║           Minimal PHP Framework by adaomajor         ║
         ║            https://github.com/adaomajor/mpf          ║
         ╚══════════════════════════════════════════════════════╝
@@ -16,12 +16,13 @@ Available Commands:
 
      help     Show this banner
      start    Starts the development server
+     run    Starts the development server
      create   Create a veiw, controller, model
      delete   Delete a veiw, controller, model
      Migrate  Create database tables for your Models
 
 Examples:
-     php mpf start 8080
+     php mpf start | run 8080
      php mpf create  / delete  view Home
      php mpf create  / delete  controller User
      php mpf create  / delete model User
@@ -36,6 +37,12 @@ start the built-in server for the App with the given port
 
 ```sh
 mpf@app:$ php mpf start 8080
+[date-time] PHP 8.x Development Server (http://127.0.0.1:8080) started
+```
+OR
+
+```sh
+mpf@app:$ php mpf run 8080
 [date-time] PHP 8.x Development Server (http://127.0.0.1:8080) started
 ```
 

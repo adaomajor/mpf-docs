@@ -5,13 +5,14 @@ You can find and edit it in the file index.php in your root dir of your app
 ```sh
 mpf@app:$ ls -la
 drwxr-xr-x 1 adaomajor 197121     0 Jul  6 13:21 App/
-drwxr-xr-x 1 adaomajor 197121     0 Jul  5 15:04 public/ <-- here is your static folder
+drwxr-xr-x 1 adaomajor 197121     0 Jul  5 15:04 public/   <-- here is your static folder
 drwxr-xr-x 1 adaomajor 197121     0 Jul  6 13:21 vendor/
 -rw-r--r-- 1 adaomajor 197121   364 Jul  4 18:08 composer.json
 -rw-r--r-- 1 adaomajor 197121   569 Jul  3 23:18 composer.lock
 -rw-r--r-- 1 adaomajor 197121   234 Feb  9 21:36 .htaccess
 -rw-r--r-- 1 adaomajor 197121   450 Jul  6 13:08 index.php <-- here it is
 -rw-r--r-- 1 adaomajor 197121 10762 Jul  6 13:57 mpf
+-rw-r--r-- 1 adaomajor 197121   320 Jul  6 13:57 .env      <-- your .env file
 
 mpf@app:$ cat index.php
 ```

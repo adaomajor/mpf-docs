@@ -24,7 +24,7 @@ Class Users extends Model{
             
     public function __construct(){
         $this->fields = [
-            "id" => Model::int($pk = true),
+            "id" => Model::PK(),
             "name" => Model::char(30, $nullable = null),
             "email" => Model::char(70, $nullable = null),
             "password" => Model::char(255, $nullable = null),
@@ -45,7 +45,7 @@ Class Posts extends Model{
             
     public function __construct(){
         $this->fields = [
-            "id" => Model::int($pk = true),
+            "id" => Model::PK(),
             "user_id" => Model::FK(['User', 'id']), // <-- check it out
             "content" => Model::text($nullable = null)
         ];
@@ -58,9 +58,8 @@ Class Posts extends Model{
 ## Saving
 **User**
 ```php
-$user = new Users();
-$user->save([
-    'name' => 'Adam Major',
+$user = Users::save([
+    'name' => 'Adão Major',
     'email' => 'adaomajor01@gmail.com',
     'password' => md5('1234')
 ]);
@@ -68,8 +67,7 @@ $user->save([
 
 **Post**
 ```php
-$post = new Post();
-$post->save([
+$post = Post::save([
     'user_id' => 1, // <-- your user id
     'content' => 'foo, bar'
 ])

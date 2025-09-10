@@ -56,6 +56,7 @@ http://127.0.0.1:8080
 │   └───Views
 ├───public
 │   vendor
+│   .env            <----- your config file
 │   .gitignore
 │   .htaccess
 │   composer.json
@@ -66,23 +67,29 @@ http://127.0.0.1:8080
 │   mpf
 ```
 
-# ⚙️ Configuration
+## Configuration 
+⚙️
 After installing MPF, you should configure your project settings to match your environment.
 
-All configuration values are stored in:
+with the .env file implementations, its thousand times faster to configure your ENV.
+
+The .env file is in the root directory of your project
+
+All configuration values are stored in .env :
 ```sh
-App/Core/config,php
+.env
 ```
 
 ```php
-<?php
-    define("USER","root"); // your user name
-    define("PASSWD",""); // your user password
-    define("DB","MPF"); // your dababase
-    define("HOST","127.0.0.1"); // your datapase server host
-    define("PORT","3306"); //you data base server port
-    define("VIEW_PATH",__DIR__."/../Views/");
-?>
+DB_USER=root
+DB_PASSWD=
+DB_NAME=MPF
+DB_HOST=127.0.0.1
+DB_PORT=3306
+
+# simple comment
+
+X_POWERED_BY="MPF - adaomajor"
 ```
 
 Make sure to create your databse in your database server

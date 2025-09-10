@@ -11,7 +11,7 @@ Class Users extends Model{
             
     public function __construct(){
         $this->fields = [
-            "id" => Model::int($pk = true),
+            "id" => Model::PK(),
             "name" => Model::char(30, $nullable = null),
             "email" => Model::char(70, $nullable = null),
             "password" => Model::char(255, $nullable = null),
@@ -41,7 +41,7 @@ Router::post('/register', ['User', 'register']);
             $password = Req::post('password');
 
             
-            $u = $userModel->save([
+            $u = Users::save([  // statically calling the method save
                 'name' => $name,
                 'email' => $email,
                 'password' => md5($password)

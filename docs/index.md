@@ -1,7 +1,7 @@
 # WELCOME TO MPF
 
 ## mpf
-v1.0.0
+v1.0.2
 <img src="/mpf.png" alt="MPF logo" width="150" height="200" />
 
 
@@ -36,14 +36,19 @@ The MPF already contains all the necessary classes and functionalities to attend
 Just do what you have to do, the rest Leave With Me!
 
 ## Adão Major
+<img src="/adao-major.jpeg" alt="Adão Major" style="border-radius: 30px; width: 200px;" />
+
 ## $ whoami
 ```sh
 Name: Adão Major
-desc: Programmer | desktop | web dev | backend | frontend | hacker enthusiast
+desc: Programmer | desktop | web dev | backend | frontend | hacker 
 Country: Angola
 email: adaomajor01@gmail.com
 Linkedin: https://www.linkedin.com/in/adaomajor
 GitHub: https://github.com/adaomajor
+X: https://x.com/gh0x7_
+facebook: https://facebook.com/adao.major.0
+instagram: https://www.instagram.com/adao_major
 ```
 
 ## Next
@@ -53,6 +58,8 @@ Found a bug or you want to request a new feature?
 Go to [issues](https://github.com/adaomajor/mpf/issues) and leave you report or feedback!
 
 👍 All contribution are welcome!
+
+Keep it simple!
 
 
 **Go to next page to start using MPF**

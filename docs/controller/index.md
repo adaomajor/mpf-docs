@@ -26,8 +26,7 @@ class User {
     }
 
     public function profile($id){
-        $user = new Users();
-        $u = $user->find()->where(['id' => $id]);
+        $u = $Users::find()->where(['id' => $id]);
         //return Res::json($u);
         $view = new View('profile');
         $view::set('user' , $u);
