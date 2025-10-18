@@ -1,6 +1,6 @@
 # mpf-docs
 
-mpf documetation v1.0.2
+mpf documetation v1.0.3
 
 your contributions are wellcome!!!
 

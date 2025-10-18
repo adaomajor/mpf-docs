@@ -25,9 +25,9 @@ export default {
         text: 'Getting Started',
         items: [
           { text: 'Introduction', link: '/' },
-          { text: 'Instalation', link: '/intro/instalation' },
+          { text: 'Installation', link: '/intro/installation' },
           { text: 'CLI', link: '/intro/cli' },
-          { text: 'What\'s in MPF 1.0.2', link: '/whatsnew' },
+          { text: 'What\'s in MPF 1.0.3', link: '/whatsnew' },
         ]
       },
       {
@@ -69,7 +69,7 @@ export default {
         text: 'Model',
         items: [
           { text: 'Models', link: '/model/' },
-          { text: 'Migrate', link: '/model/' },
+          { text: 'Migrations', link: '/model/#migration' },
           { text: 'Model Fields Type', link: '/model/#model-fields-type' },
           { text: 'Saving Data', link: '/model/saving' },
           { text: 'Finding Data', link: '/model/finding' },

@@ -1,11 +1,49 @@
-# WHATS NEW IN VERSION 1.0.2
+# WHATS NEW IN VERSION 1.0.3
 
 ## mpf
 
 <img src="/mpf.png" alt="MPF logo" width="150" height="200" />
-v1.0.2
+v1.0.3
 
-# Enviroment System
+
+# SHORT OVERVIEW
+
+Added migrations system 
+
+Added support for foreign keys (including post-migration)
+
+Improved constraint handling on delete
+
+⚙️ Query Engine
+
+Fixed issue with newly saved data not returning properly
+
+Fixed count() + where() compatibility
+
+Fixed join() when on() is not explicitly defined
+
+Fixed column overwriting when joining tables with identical column names
+
+🧩 Environment
+
+Added .env DEBUG and PRODUCTION modes
+ 
+When DEBUG=TRUE, all system messages and SQL logs are displayed
+
+When DEBUG=false, errors and debug outputs are suppressed for production safety
+
+
+
+---
+# Added migrations system
+now you can edit, add, remove model/database columns safely without reseting the whole database and with no risks of losing your datas.
+
+[Migration System](/model/#migration)
+
+
+---
+
+# Enviroment System && DEBUG(develpment) / production mode implementation
 with .env file implementation its much easier to configure your enviroment
 
 [Enviroment System](/intro/instalation#configuration)

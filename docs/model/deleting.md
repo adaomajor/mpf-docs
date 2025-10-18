@@ -10,14 +10,14 @@ Now there is no need to instantiate the class before delete
 
 Just go Strait
 
-*Model::delete([ *Your conditions* ])*
+*Model::delete([ *Your conditions* ])->exec()*
 
 
 
 ```php
     public function delete($id){
         // AUTH
-        $user = Users::delete(['id' => $id]); // delete from users where id = 1; and then return
+        $user = Users::delete(['id' => $id])->exec(); // delete from users where id = 1; and then return
         Res::json($users); //send deleted data as a json
     }
 ```
@@ -28,7 +28,7 @@ Just go Strait
     // WHERE id=1 AND name='adaomajor'
     public function delete($id){
         // AUTH
-        $user = Users::delete(['id' => $id, 'name' => 'Adão Major'])
+        $user = Users::delete(['id' => $id, 'name' => 'Adão Major'])->exec();
         Res::json($user);
     }
 ```

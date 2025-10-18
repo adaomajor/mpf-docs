@@ -4,7 +4,7 @@
 ```sh
 mpf@app:$ php mpf help
         ╔══════════════════════════════════════════════════════╗
-        ║                MPF Framework CLI v 1.0.2             ║
+        ║                MPF Framework CLI v 1.0.3             ║
         ║           Minimal PHP Framework by adaomajor         ║
         ║            https://github.com/adaomajor/mpf          ║
         ╚══════════════════════════════════════════════════════╝
@@ -16,7 +16,7 @@ Available Commands:
 
      help     Show this banner
      start    Starts the development server
-     run    Starts the development server
+     run      Starts the development server
      create   Create a veiw, controller, model
      delete   Delete a veiw, controller, model
      Migrate  Create database tables for your Models
@@ -84,7 +84,7 @@ mpf@app:$ php mpf create model Posts
 [*] model: Posts created!
 ```
 
-#### the Views are saved in /App/Model
+#### the Views are saved in /App/Models
 
 ## Migrate
 
@@ -103,10 +103,6 @@ it's useful when you are working with foreign keys constrains dependencies, firs
 mpf@app:$ php mpf migrate Users
 [*] creating the table: Users
 ```
-
-# ⚠ Run migrate again may reset all the table and delete all the datas stored
-#### further version will have functionalities for migratinos
-
 ## Delete
 Similar to create you can dele de elements of your app with the delete /del command line argument as well
 

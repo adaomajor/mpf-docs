@@ -68,9 +68,73 @@ Or you can migrate just a specific Modle
 mpf@dev:$ php mpf migrate Users
 [*] creating the table: Users
 ```
+## Migration
 
-### ⚠ Warning: migrate all the models my throw foreign keys constrains error
-#### if it happens migrate one by one, or fisrt the table with the columns which other will use as Foreign Keys
+now you can edit, add, remove model/database columns safely without reseting the whole database and with no risks of losing your datas.
+take a look on the show case.
+```sh
+mpf@dev:$ cat /App/models/Users.php
+```
+```php
+Class Users extends Model{
+    protected $table = "Users";
+    protected $fields = [];
+            
+    public function __construct(){
+        $this->fields = [
+            "id" => Model::PK(),
+            "name" => Model::char(30, $nullable = null),
+            "email" => Model::char(70, $nullable = null),
+            "password" => Model::char(255, $nullable = null),
+        ];
+    }
+}
+
+```
+# Migrate it
+```sh
+mpf@dev:$ php mpf migrate Users
+[!] be careful about the changing on your database...
+[*] Migrating the talbe: users
+[+] saving migration: Users_migration_2025_10_15_22_19_47
+[+] creating table: Users...
+[+] table: Users, created sucessfully
+```
+ 
+ ***Your migrations are saved in App/Models/Migrations/<Model_name>***
+
+Lets make some real change.
+```sh
+mpf@dev:$ cat /App/models/Users.php
+```
+```php
+Class Users extends Model{
+    protected $table = "Users";
+    protected $fields = [];
+            
+    public function __construct(){
+        $this->fields = [
+            "id" => Model::PK(),
+            "name" => Model::char(40, $nullable = null), // edited: from varchar 30 to 40
+            "email" => Model::char(70, $nullable = null),
+            "secong_mail" => Model::char(70, $nullable = null), // add: will be added to db columns
+            //"password" => Model::char(255, $nullable = null), // remove: password columns will be removed from the table
+        ];
+    }
+}
+```
+# Migrate it
+```sh
+mpf@dev:$ php mpf migrate Users
+[!] be careful about the changing on your database...
+[*] Migrating the talbe: users
+[*] name : will be changed
+[*] email : will be changed
+[+] secong_mail : will be added
+[-] password : will be removed
+[+] creating migration: Users_migration_2025_10_15_22_29_29
+```
+ 
 
 ## Model Fields Type
 ```php

@@ -53,6 +53,7 @@ http://127.0.0.1:8080
 │   │   ├───DB
 │   │   └───prefix
 │   ├───Models
+│   │     └───Migrations  <----- your models changes will be saved here, for later verification if needed 
 │   └───Views
 ├───public
 │   vendor
@@ -63,6 +64,7 @@ http://127.0.0.1:8080
 │   composer.lock
 │   LICENSE
 │   README.md
+│   VERSION        <------ CHECK IT FOR FAST REVIEW OF THE CURRENT RELEASE
 │   index.php
 │   mpf
 ```
@@ -90,9 +92,16 @@ DB_PORT=3306
 # simple comment
 
 X_POWERED_BY="MPF - adaomajor"
+
+DEBUG=TRUE // <-- thats new right
 ```
 
-Make sure to create your databse in your database server
+if the DEBUG env variable is set to TRUE(its case sensitive) you back-end will  return the errors and warnings when something unexpected happens, as expected while your are in development mode.
+
+otherwise, if its either set to PRODUCTION or nothing, your back-end wont say anything when some creepy thing happens, which good for security issues
+
+
+# Make sure to create your databse in your database server
 ```sh
 mpf@dev:$ mysql -u root -p 
 MySql [(none)] > create database mpf;
